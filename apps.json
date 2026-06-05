@@ -5,7 +5,7 @@
       "buildVersion": "285",
       "developerName": "Christian Selig (& Will & Apollo-Reborn contributors)",
       "iconURL": "https://apolloreborn.app/assets/icon.png",
-      "tintColor": "#F0542D",
+      "tintColor": "#046A38",
       "category": "social",
       "screenshots": [
         "https://raw.githubusercontent.com/willmcwain/Apollo-Reborn/main/img/settings.jpg",
@@ -65,7 +65,7 @@
       "identifier": "v1.15.11_3.0.0",
       "caption": "Apollo-Reborn update available",
       "date": "2026-05-29T05:10:50Z",
-      "tintColor": "#F0542D",
+      "tintColor": "#046A38",
       "imageURL": "https://raw.githubusercontent.com/willmcwain/Apollo-Reborn/main/img/lg-icons.jpg",
       "url": "https://github.com/willmcwain/Apollo-Reborn/releases/tag/build-ipa-2"
     }
@@ -73,7 +73,7 @@
   "iconURL": "https://apolloreborn.app/assets/icon.png",
   "headerURL": "https://raw.githubusercontent.com/willmcwain/Apollo-Reborn/main/img/lg-icons.jpg",
   "website": "https://apolloreborn.app",
-  "tintColor": "#F0542D",
+  "tintColor": "#046A38",
   "identifier": "app.apolloreborn.standard",
   "name": "Apollo-Reborn",
   "subtitle": "Will's updated Apollo-Reborn source",
