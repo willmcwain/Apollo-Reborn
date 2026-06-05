@@ -2,7 +2,7 @@
   "apps": [
     {
       "bundleIdentifier": "com.christianselig.Apollo",
-      "buildVersion": "286",
+      "buildVersion": "285",
       "developerName": "Christian Selig (& Apollo-Reborn contributors)",
       "iconURL": "https://apolloreborn.app/assets/icon.png",
       "tintColor": "#F0542D",
