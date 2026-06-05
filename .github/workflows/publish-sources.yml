@@ -35,24 +35,15 @@ jobs:
           # The source push below uses a GitHub App token that can bypass the
           # protected main ruleset. Do not leave checkout's GITHUB_TOKEN auth
           # header in place, or Git may push as github-actions[bot] instead.
-          persist-credentials: false
+          persist-credentials: true
 
       - name: Regenerate distribution sources
         env:
           GITHUB_TOKEN: ${{ github.token }}
         run: python3 ./scripts/update_source_json.py
 
-      - name: Generate source updater app token
-        id: source_updater_token
-        uses: actions/create-github-app-token@bcd2ba49218906704ab6c1aa796996da409d3eb1 # v3.2.0
-        with:
-          app-id: ${{ secrets.SOURCE_UPDATER_APP_ID }}
-          private-key: ${{ secrets.SOURCE_UPDATER_APP_PRIVATE_KEY }}
-          permission-contents: write
-
       - name: Commit and push
         env:
-          APP_TOKEN: ${{ steps.source_updater_token.outputs.token }}
           RELEASE_TAG: ${{ github.event.release.tag_name }}
         run: |
           git config user.name "apollo-source-updater[bot]"
@@ -68,8 +59,6 @@ jobs:
             MSG="$MSG for $RELEASE_TAG"
           fi
           git commit -m "$MSG"
-          git config --local --unset-all http.https://github.com/.extraheader || true
-          git remote set-url origin "https://x-access-token:${APP_TOKEN}@github.com/${GITHUB_REPOSITORY}.git"
           git pull --rebase origin main
           git push origin HEAD:main
           # Capture the SHA after the push so the summary reflects what actually
