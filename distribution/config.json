@@ -1,5 +1,5 @@
 {
-  "repo": "Apollo-Reborn/Apollo-Reborn",
+  "repo": "willmcwain/Apollo-Reborn",
   "distribution": {
     "sourceBaseURL": "https://raw.githubusercontent.com/Apollo-Reborn/Apollo-Reborn/main",
     "manifestOutput": "release-manifest.json"
