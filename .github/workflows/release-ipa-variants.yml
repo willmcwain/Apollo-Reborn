@@ -46,7 +46,7 @@ jobs:
           # The source push at the end uses a GitHub App token that can bypass
           # the protected main ruleset. Do not persist checkout's GITHUB_TOKEN
           # auth header, or Git may push as github-actions[bot] instead.
-          persist-credentials: false
+          persist-credentials: true
 
       - name: Install build dependencies
         run: brew install ldid dpkg make
@@ -225,32 +225,20 @@ jobs:
         run: |
           python3 ./scripts/update_source_json.py
 
-      - name: Generate source updater app token
-        if: github.ref == 'refs/heads/main' && inputs.update_sources && !inputs.draft
-        id: source_updater_token
-        uses: actions/create-github-app-token@bcd2ba49218906704ab6c1aa796996da409d3eb1 # v3.2.0
-        with:
-          app-id: ${{ secrets.SOURCE_UPDATER_APP_ID }}
-          private-key: ${{ secrets.SOURCE_UPDATER_APP_PRIVATE_KEY }}
-          permission-contents: write
-
       - name: Commit updated source JSON files
         if: github.ref == 'refs/heads/main' && inputs.update_sources && !inputs.draft
         env:
-          APP_TOKEN: ${{ steps.source_updater_token.outputs.token }}
+          GITHUB_TOKEN: ${{ github.token }}   # already set above — just use it here too
         run: |
-          git config user.name "apollo-source-updater[bot]"
+          git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
           git add apps.json apps_noext.json apps_glass.json apps_noext_glass.json \
-                  apps_glass_icons.json apps_noext_glass_icons.json release-manifest.json
+            apps_glass_icons.json apps_noext_glass_icons.json release-manifest.json
           if git diff --cached --quiet; then
             echo "No source JSON changes to commit."
             exit 0
           fi
           git commit -m "Update distribution sources for ${{ steps.meta.outputs.tag_name }}"
-          git config --local --unset-all http.https://github.com/.extraheader || true
-          git remote set-url origin "https://x-access-token:${APP_TOKEN}@github.com/${GITHUB_REPOSITORY}.git"
-          git pull --rebase origin main
           git push origin HEAD:main
           # Capture the SHA after the push so the summary reflects what actually
           # landed on main; the rebase above can replay the commit to a new SHA.
