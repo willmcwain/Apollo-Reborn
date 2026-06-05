@@ -1,12 +1,12 @@
 {
   "repo": "willmcwain/Apollo-Reborn",
   "distribution": {
-    "sourceBaseURL": "https://raw.githubusercontent.com/Apollo-Reborn/Apollo-Reborn/main",
+    "sourceBaseURL": "https://raw.githubusercontent.com/willmcwain/Apollo-Reborn/main",
     "manifestOutput": "release-manifest.json"
   },
   "source": {
     "iconURL": "https://apolloreborn.app/assets/icon.png",
-    "headerURL": "https://raw.githubusercontent.com/Apollo-Reborn/Apollo-Reborn/main/img/lg-icons.jpg",
+    "headerURL": "https://raw.githubusercontent.com/willmcwain/Apollo-Reborn/main/img/lg-icons.jpg",
     "website": "https://apolloreborn.app",
     "tintColor": "#F0542D"
   },
@@ -18,14 +18,14 @@
     "tintColor": "#F0542D",
     "category": "social",
     "screenshots": [
-      "https://raw.githubusercontent.com/Apollo-Reborn/Apollo-Reborn/main/img/settings.jpg",
-      "https://raw.githubusercontent.com/Apollo-Reborn/Apollo-Reborn/main/img/custom.jpg",
-      "https://raw.githubusercontent.com/Apollo-Reborn/Apollo-Reborn/main/img/recents.jpg",
-      "https://raw.githubusercontent.com/Apollo-Reborn/Apollo-Reborn/main/img/inline.jpg",
-      "https://raw.githubusercontent.com/Apollo-Reborn/Apollo-Reborn/main/img/lg-icons.jpg",
-      "https://raw.githubusercontent.com/Apollo-Reborn/Apollo-Reborn/main/img/avatar-profile.jpg",
-      "https://raw.githubusercontent.com/Apollo-Reborn/Apollo-Reborn/main/img/avatar-comments.jpg",
-      "https://raw.githubusercontent.com/Apollo-Reborn/Apollo-Reborn/main/img/translation.jpg"
+      "https://raw.githubusercontent.com/willmcwain/Apollo-Reborn/main/img/settings.jpg",
+      "https://raw.githubusercontent.com/willmcwain/Apollo-Reborn/main/img/custom.jpg",
+      "https://raw.githubusercontent.com/willmcwain/Apollo-Reborn/main/img/recents.jpg",
+      "https://raw.githubusercontent.com/willmcwain/Apollo-Reborn/main/img/inline.jpg",
+      "https://raw.githubusercontent.com/willmcwain/Apollo-Reborn/main/img/lg-icons.jpg",
+      "https://raw.githubusercontent.com/willmcwain/Apollo-Reborn/main/img/avatar-profile.jpg",
+      "https://raw.githubusercontent.com/willmcwain/Apollo-Reborn/main/img/avatar-comments.jpg",
+      "https://raw.githubusercontent.com/willmcwain/Apollo-Reborn/main/img/translation.jpg"
     ],
     "localizedDescription": "Apollo-Reborn is the community-maintained Apollo sideload build powered by the Apollo-Reborn tweak.\n\nIt restores custom API support, media fixes, uploads, inline media, translation, saved categories, Liquid Glass support on iOS 26+, and the rest of the project’s ongoing fixes and enhancements.\n\nThese sources are intended for AltStore Classic, SideStore, and Feather. Apollo-Reborn is not compatible with AltStore PAL.\n\nChoose the source variant that matches how you sideload:\n\n• Standard: full app bundle with extensions intact\n• No Extensions: strips Apollo’s app extensions to reduce App ID usage on free Apple IDs\n• GLASS: adds the Liquid Glass iOS 26 patch and bundled Liquid Glass icon catalog\n• No Extensions + GLASS: combines both options\n\nThis project is not affiliated with Apollo or Christian Selig.",
     "appPermissions": {
@@ -51,7 +51,7 @@
   },
   "news": {
     "caption": "Apollo-Reborn update available",
-    "imageURL": "https://raw.githubusercontent.com/Apollo-Reborn/Apollo-Reborn/main/img/lg-icons.jpg"
+    "imageURL": "https://raw.githubusercontent.com/willmcwain/Apollo-Reborn/main/img/lg-icons.jpg"
   },
   "variants": [
     {
