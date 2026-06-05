@@ -1,9 +1,9 @@
 {
   "updatedAt": "2026-05-29T05:10:50Z",
   "release": {
-    "tag": "v1.15.11_3.0.0",
-    "name": "v3.0.0 - A new chapter: Apollo-Reborn 🚀",
-    "url": "https://github.com/Apollo-Reborn/Apollo-Reborn/releases/tag/v1.15.11_3.0.0",
+    "tag": "build-ipa-2",
+    "name": "Apollo Reborn 3.0 RR-API",
+    "url": "https://github.com/willmcwain/Apollo-Reborn/releases/tag/build-ipa-2",
     "apolloVersion": "1.15.11",
     "tweakVersion": "3.0.0"
   },
